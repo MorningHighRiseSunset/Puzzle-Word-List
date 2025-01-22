@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="stats" class="stats">Total unique words: 0</div>
+        <div class="controls">
+            <div class="input-group">
+                <label for="minLength">Min Length:</label>
+                <input type="number" id="minLength" min="2" max="7" value="2">
+            </div>
+            <div class="input-group">
+                <label for="maxLength">Max Length:</label>
+                <input type="number" id="maxLength" min="2" max="7" value="7">
+            </div>
+            <div class="input-group">
+                <label for="wordCount">Number of Words:</label>
+                <input type="number" id="wordCount" min="1" max="10000" value="100">
+            </div>
+            <div class="button-group">
+                <button onclick="generateWords()">Generate Words</button>
+                <button onclick="clearWords()" class="clear-btn">Clear All</button>
+            </div>
+        </div>
+        <div class="output-section">
+            <textarea id="wordOutput" readonly rows="20"></textarea>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
